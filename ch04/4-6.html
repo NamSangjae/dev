@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>4-6</title>
+	<style>
+		
+		.box {
+			display: inline-block;
+			width: 300px;
+			height: 300px;
+			border: 1px solid black;
+		}
+
+		.box5 {
+			width: 400px;
+		}
+
+		.box1 { position: relative; }
+		.box1 > div {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 200px;
+			height: 200px;
+			background: green;
+		}
+		
+		.box2 { position: relative; }
+		.box2 > div {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 200px;
+			height: 200px;
+			background: green;
+		}
+		.box2 > div > div {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: 100px;
+			height: 100px;
+			background: blue;
+		}
+
+		.box3 { position: relative; }
+		.box3 > div {
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: -100px;
+			width: 200px;
+			height: 200px;
+			background: green;
+		}
+		.box3 > div > div {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -50px;
+			margin-top: -50px;
+			width: 100px;
+			height: 100px;
+			background: blue;
+		}
+
+		.box4 { position: relative; }
+		.box4 > div {			
+			position: absolute;
+			width: 100px;
+			height: 100px;
+		}
+		.box4 > div:nth-child(1) { left: 0; top: 0; background: red; }
+		.box4 > div:nth-child(2) { right: 0; top: 0; background: green; }
+		.box4 > div:nth-child(3) { right: 0; bottom: 0; background: blue; }
+		.box4 > div:nth-child(4) { left: 0; bottom: 0; background: orange; }
+		.box4 > div:nth-child(5) { 
+			right: 50%;
+			bottom: 50%;
+			margin-right: -50px;
+			margin-bottom: -50px;
+			background: pink; 
+		}
+
+		.box6 {}
+		.box6 > div {			
+			width: 100px;
+			height: 100px;
+		}
+		.box6 > div:nth-child(1) { float: left; background: red; }
+		.box6 > div:nth-child(2) { float: right; background: green; }
+		.box6 > div:nth-child(3) { float: left; clear:both; margin-left: 100px; background: blue; }
+		.box6 > div:nth-child(4) { float: left; clear:both; background: orange; }
+		.box6 > div:nth-child(5) { float: right; background: pink; }
+
+		.box5 {}
+		.box5 > div {
+			float: left;			
+			width: 100px;
+			height: 100px;
+		}
+		.box5 > div:nth-child(1) { background: red; }
+		.box5 > div:nth-child(2) { background: green; }
+		.box5 > div:nth-child(3) { background: blue; }
+		.box5 > div:nth-child(4) { clear: both; background: orange; }
+		.box5 > div:nth-child(5) { background: pink; }
+		.box5 > div:nth-child(6) { clear: both; background: silver; }
+
+
+	</style>
+</head>
+<body>
+	<h3>position 연습문제</h3>
+	
+	<div class="box box1">
+		<div></div>
+	</div>
+
+	<div class="box box2">
+		<div>
+			<div></div>
+		</div>
+	</div>
+
+	<div class="box box3">
+		<div>
+			<div></div>
+		</div>
+	</div>
+
+	<div class="box box4">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+
+	<div class="box box6">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+
+	<div class="box box5">
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</div>
+
+</body>
+</html>

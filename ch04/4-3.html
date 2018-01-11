@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>4-3</title>
+	<style>
+		
+		.box { 
+			width: 100%;
+			height: 200px;
+			border: 1px solid black;
+			margin-top: 10px;
+		}
+
+		.box1 {
+			background-image: url('./img/bg_front.png');
+		}
+		.box2 {
+			background-image: url('./img/bg_front.png');
+			background-size: 100% 200px;
+		}
+
+		section:nth-of-type(1) > div {
+			display: inline-block;
+			width: 32%;
+			height: 200px;
+			border: 1px solid black;
+			background-image: url('./img/bg_front.png');
+		}
+
+		section:nth-of-type(1) > div:nth-child(1) {
+			background-size: 100px 100px;
+		}
+
+		section:nth-of-type(1) > div:nth-child(2) {
+			background-size: 100%;
+		}
+
+		section:nth-of-type(1) > div:nth-child(3) {
+			background-size: cover;
+		}
+
+		section:nth-of-type(2) > div {
+			display: inline-block;
+			width: 24%;
+			height: 200px;
+			border: 1px dotted black;
+			background-image: url('./img/puppy.png');
+			background-size: 40px 40px;
+			background-repeat: no-repeat;
+		}
+
+		section:nth-of-type(2) > div:nth-child(1) { background-position: left; }
+		section:nth-of-type(2) > div:nth-child(2) { background-position: right; }
+		section:nth-of-type(2) > div:nth-child(3) { background-position: 100px 100px; }
+		section:nth-of-type(2) > div:nth-child(4) { background-position: 100% 100%; }
+		section:nth-of-type(2) > div:nth-child(5) { background-position: left bottom; }
+		section:nth-of-type(2) > div:nth-child(6) { background-position: right bottom; }
+		section:nth-of-type(2) > div:nth-child(7) { background-position: center; }
+		section:nth-of-type(2) > div:nth-child(8) { background-position: bottom; }
+
+		section:nth-of-type(3) > div {
+			display: inline-block;
+			width: 32%;
+			height: 200px;
+			border: 1px solid black;
+		}
+
+		section:nth-of-type(3) > div:nth-child(1) { background: #ff0 url('./img/puppy.png') no-repeat; }
+		section:nth-of-type(3) > div:nth-child(2) { background: url('./img/repeat-x.png') repeat-x; }
+		section:nth-of-type(3) > div:nth-child(3) { background: url('./img/repeat-y.png') repeat-y; }
+		
+	</style>
+</head>
+<body>
+	<h3>배경속성</h3>
+
+	<div class="box box1"></div>
+	<div class="box box2"></div>
+
+	<hr />
+
+	<section>
+		<div></div>
+		<div></div>
+		<div></div>
+	</section>
+
+	<hr />
+
+	<section>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</section>
+	
+	<hr />
+	
+	<section>
+		<div></div>
+		<div></div>
+		<div></div>
+	</section>
+
+
+</body>
+</html>

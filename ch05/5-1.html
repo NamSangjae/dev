@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>5-1</title>
+
+</head>
+<body>
+	<h3>문서객체 작업</h3>
+
+	<ul>
+		<li id="seoul">서울</li>
+		<li>대전</li>
+		<li>대구</li>
+		<li class="busan">부산</li>
+		<li>광주</li>
+	</ul>
+
+	<script>
+
+		// 문서객체 생성
+		var h3  = document.createElement('h3');
+		var txt = document.createTextNode('동적으로 생성한 h3입니다.');
+		h3.appendChild(txt);
+		document.body.appendChild(h3);
+
+		// 문서객체 생성
+		var img = document.createElement('img');
+		img.src = './img/puppy.png';
+		img.alt = '강아지';
+		document.body.appendChild(img);
+
+		// 문서객체 생성
+		var div = document.createElement('div');
+		div.style.width  = '100px';
+		div.style.height = '100px';
+		div.style.border = '1px solid black';
+		div.style.backgroundColor = 'orange';
+		document.body.appendChild(div);
+
+		// 문서객체 선택
+		var li = document.getElementsByTagName('li');
+		li[1].style.color = '#F00';
+
+		var seo = document.getElementById('seoul');
+		seo.style.color = '#00F';
+
+		// 문서객체 제거
+		document.body.removeChild(li[2]);
+
+	</script>
+
+</body>
+</html>

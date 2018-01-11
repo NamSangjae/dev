@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>2-5</title>
+	</head>
+	<body>
+		<h3>입력양식태그</h3>
+
+		<form action="http://naver.com">
+			<input type="text" name="id" /><br />
+			<input type="password" name="pw" /><br />
+			<input type="submit" value="로그인" />
+		</form>
+
+		<hr />
+
+		<form action="http://daum.net">
+			<h3>취미를 선택하세요.</h3>
+			<input type="checkbox" name="chk1" value="1">등산
+			<input type="checkbox" name="chk2" value="2">영화
+			<input type="checkbox" name="chk3" value="3">운동
+			<input type="checkbox" name="chk4" value="4">독서
+			<input type="checkbox" name="chk5" value="5">게임
+
+			<h3>성별</h3>
+			<input type="radio" name="gender" value="1">남자
+			<input type="radio" name="gender" value="2">여자
+
+			<h3>지역</h3>
+			<select name="addr">
+				<option>서울</option>
+				<option>대전</option>
+				<option>대구</option>
+				<option>부산</option>
+				<option>광주</option>
+			</select>
+			<input type="submit" value="전송하기" />
+		</form>
+
+		<hr />
+
+		<form action="http://nate.com" method="post">
+			<h3>자기소개하기</h3>
+			<textarea name="intro" rows="10" cols="50"></textarea>
+			<input type="submit" value="전송" />			
+		</form>
+
+
+	</body>
+</html>

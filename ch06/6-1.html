@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>6-1</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // 확장집합 : 제이쿼리 선택자로 선택한 결과 객체
+      var set1 = $('ol');
+      var set2 = $('ul > li');
+
+      // length - 확장집합의 원소갯수를 구한다.
+      var v1 = set1.length;
+      var v2 = set2.length;
+      console.log('v1 : '+v1);
+      console.log('v2 : '+v2);
+
+      // eq() - 확장집합에서 인덱스번호로 원소 추출
+      set2.eq(2).css('color', 'red');
+      set2.eq(0).css('color', 'blue');
+
+      // first() - 확장집합에서 첫번째 원소를 추출
+      set2.first().css('background', 'orange');
+
+      // last() - 확장집합에서 마지막 원소를 추출
+      set2.last().css('background', 'skyblue');
+
+      // index() - 확장집합 원소의 인덱스번호를 추출
+      var set3 = $('ol > li > a');
+      var set4 = $('ol > li');
+
+      var idx3  = set3.last().index();
+      var idx4  = set4.eq(3).index();
+
+      console.log('idx3 : '+idx3);
+      console.log('idx4 : '+idx4);
+
+      // slice() - 인덱스번호를 기준으로 확장집합 원소를 잘라낸다.
+      var set5 = set2.slice(1, 4);
+      set5.css('background', 'pink');
+
+      // each() - 확장집합의 각각의 원소의 익명함수를 실행
+      set3.each(function(){
+
+        // $(this) - 현재 실행중인 확장집합의 원소객체
+        $(this).css('background', 'yellow');
+
+      });
+
+      // children() - 확장집합의 자식원소를 추출
+      var set6 = set1.children();
+      var set7 = set6.children();
+
+      set6.css('border', '1px dotted black');
+      set7.css('color', 'red');
+
+      //next() - 확장집합 특정원소에서 그다음번째 원소를 추출
+      set6.first().next().css('background', 'green');
+      set6.eq(1).next().next().css('background', 'skyblue');
+
+      //prev() - 확장집합 특정원소에서 이전 원소를 추출
+      set6.last().prev().prev().css('background', 'pink');
+
+      //parent() - 확장집합 특정원소의 부모원소를 추출
+      set6.children().eq(4).parent().css('background', 'orange');
+
+      //find() - 확장집합의 특정 원소를 클래스, 아이디 값으로 추출
+      $('ul').find('.china').css('border', '1px dotted black');
+    });
+
+  </script>
+
+</head>
+<body>
+  <h3>1.제이쿼리 확장집합</h3>
+
+  <ul>
+    <li>미국</li>
+    <li>일본</li>
+    <li class="china">중국</li>
+    <li>독일</li>
+    <li>호주</li>
+  </ul>
+
+  <ol>
+    <li><a href="#">서울</a></li>
+    <li><a href="#">도쿄</a></li>
+    <li><a href="#">북경</a></li>
+    <li><a href="#">워싱턴</a></li>
+    <li><a href="#">베를린</a></li>
+  </ol>
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>

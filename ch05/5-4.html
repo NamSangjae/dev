@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>5-4</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+
+      $(function(){
+
+        // 자식,후손선택자
+        $('ul > li').css('color', 'green');
+        $('ol > .seoul').css('color', '#abcdef');
+        $('ul a').css('color', 'orange');
+
+        // 구조선택자
+        $('ol > li:first-child').css('background', 'yellow');
+        $('ul > li:last-child').css('background', 'gray');
+        $('li:nth-child(2)').css('background', 'green');
+        $('h3:nth-of-type(2)').css('color', 'magenta');
+        $('ol > li:eq(3)').css('background', 'orange');
+      });
+
+    </script>
+
+
+  </head>
+  <body>
+    <h3>4.자식, 후손선택자</h3>
+    <ul>
+      <li class="seoul">서울</li>
+      <li>대전</li>
+      <li>대구</li>
+      <li class="busan">부산</li>
+      <li><a href="https://www.gwangju.go.kr/">광주</a></li>
+    </ul>
+    <h3>5.구조선택자</h3>
+    <ol>
+      <li class="seoul">서울</li>
+      <li>대전</li>
+      <li>대구</li>
+      <li class="busan">부산</li>
+      <li><a href="https://www.gwangju.go.kr/">광주</a></li>
+    </ol>
+
+
+  </body>
+</html>

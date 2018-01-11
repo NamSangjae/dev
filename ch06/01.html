@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+	$(document).ready(function(){
+		var set2 = $('ul>li');
+			//제이쿼리선택차로 선택한 결과 객체 >> 확장집합
+		var set1 = $('ol');
+		//>> 현재 한개짜리 확장집합 선택한 상태
+		//length 확장자 원소 갯수를 구한다.
+		var v1 = set1.length;
+		var v2 = set2.length;
+		console.log('v1: '+ v1);
+		console.log('v2: '+ v2);
+		//eq() 확장집합에서 인덱스번호로 원소 추출
+		
+		var tg1 = set2.eq(2);
+		tg1.css('color','red');
+		set2.eq(0).css('color','blue');
+		//=== set2.eq(2).css('color','red');
+		//제이쿼리는 '.'으로 연속적으로 함수를 사용할수있다.
+
+
+		//first()
+
+		//last()
+
+		//index()
+
+		//slice()
+
+		//each()
+
+		//children()
+
+		//next()
+
+		//prev()
+
+		//parent()
+
+		//find()
+	});
+</script>
+</head>
+
+<body>
+	<h3> 1. 제이쿼리 확장집합</h3>
+
+	<ul>
+		<li>미국</li>
+		<li>일본</li>
+		<li>중국</li>
+		<li>독일</li>
+		<li>호주</li>
+	</ul>
+
+
+	<ol>
+		<li>서울</li>
+		<li>도쿄</li>
+		<li>베이징</li>
+	</ol>
+</body>
+</html>

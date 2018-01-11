@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>4-5</title>
+	<style>
+		/* float는 텍스트위에 이미지를 띄우는 용도 */
+		img[alt=puppy] { 
+			float: left;
+		}
+
+		p {
+			background: skyblue;
+		}
+
+		.box1 {
+			width: 80%;
+			height: 300px;
+			border: 1px solid black;
+			margin: 0 auto;
+			overflow: hidden;
+		}
+
+		.box1 > div {
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			background: orange;
+			box-sizing: border-box;
+		}
+		
+		.box1 > div:nth-child(1) { float: left; }
+		.box1 > div:nth-child(2) { float: left; }
+		.box1 > div:nth-child(3) { float: left; }
+		.box1 > div:nth-child(4) { float: right; }
+		.box1 > div:nth-child(5) { float: right; }
+		.box1 > div:nth-child(6) { float: right; }
+
+		
+		.box2 {
+			width: 80%;
+			height: 300px;
+			border: 1px solid black;
+			margin: 10px auto;
+		}
+		.box2 > div {
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			background: green;
+			box-sizing: border-box;
+		}
+
+		.box2 > div:nth-child(1) { float: left; }
+		.box2 > div:nth-child(2) { float: left; }
+		.box2 > div:nth-child(3) { float: left; clear: both; }
+		.box2 > div:nth-child(4) { float: right; }
+		.box2 > div:nth-child(5) { float: right; }
+		.box2 > div:nth-child(6) { float: right; clear: both; }
+
+
+
+
+	</style>
+</head>
+<body>
+	<h3>float 속성</h3>
+	
+	<img src="./img/puppy.png" alt="puppy" />
+	<p>
+		동해물과 백두산이 마르고 닳도록<br />
+		하느님이 보우하사 우리나라만세<br />
+		무궁화 삼천리 화려강산<br />
+		대한사람 대한으로 길이보전하세.
+	</p>
+	<p>
+		동해물과 백두산이 마르고 닳도록<br />
+		하느님이 보우하사 우리나라만세<br />
+		무궁화 삼천리 화려강산<br />
+		대한사람 대한으로 길이보전하세.
+	</p>
+	
+	<hr />
+
+	<div class="box1">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+	</div>
+
+	<hr />
+
+	<div class="box2">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+	</div>
+
+	<hr />
+
+	<style>
+		
+		.box3 {
+			width: 200px;
+			height: auto;
+			border: 1px solid red;
+			overflow: hidden;
+		}
+
+		.box3 > div {
+			float: left;
+			width: 100px;
+			height: 100px;
+			border: 1px solid black;
+			box-sizing: border-box;
+			background: orange;
+		}
+
+	</style>
+
+	<div class="box3">
+		<div></div>
+	</div>
+
+
+</body>
+</html>

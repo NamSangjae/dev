@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>5-3</title>
+    <script src="./js/jquery-3.2.1.js"></script>
+    <script>
+
+      // 자바스크립트
+      window.onload = function(){
+        var seoul = document.getElementById('seoul');
+        seoul.style.color = 'red';
+      }
+
+      // 제이쿼리
+      $(document).ready(function(){
+        // 전체선택자
+        $('*').css('color', 'green');
+
+        // 태그선택자
+        $('li').css('color', 'blue');
+
+        // 클래스선택자
+        $('.gwangju').css('color', 'orange');
+
+        // 아이디선택자
+        $('#busan').css('color', 'red');
+      });
+
+    </script>
+
+  </head>
+  <body>
+    <h3>3.jQuery 선택자</h3>
+    <ul>
+      <li id="seoul">서울</li>
+      <li>대전</li>
+      <li>대구</li>
+      <li id="busan">부산</li>
+      <li class="gwangju">광주</li>
+    </ul>
+
+
+
+  </body>
+</html>
